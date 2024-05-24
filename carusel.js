@@ -1,11 +1,7 @@
-function nextImage() {
-    changeImage(1)
-}
+// Global Variables
+const totalImages = 4
 
-function previousImage() {
-    changeImage(-1)
-}
-
+// Functions
 function changeImage(offset) {
     console.log("moving to previous image")
 
@@ -38,6 +34,7 @@ function setImage(imageNumber) {
     }
 }
 
+// Helper function
 function getIndexOfCurrentImage() {
     let currentImage
 
@@ -63,8 +60,17 @@ function getIndexOfCurrentImage() {
 }
 
 // Wiring the functions up to buttons
+const firstButton = document.getElementById("first-button")
 const previousButton = document.getElementById("previous-button")
 const nextButton = document.getElementById("next-button")
+const lastButton = document.getElementById("last-button")
 
-previousButton.addEventListener("click", previousImage)
-nextButton.addEventListener("click", nextImage)
+// Normal function
+function funcName(parm1, param2) { /** Logic */ }
+// Arrow function / Lambda, anonyme funksjoner
+(param1, param2) => { /** Logic */ }
+
+firstButton.addEventListener("click", () => { setImage(0) })
+previousButton.addEventListener("click", () => { changeImage(-1) })
+nextButton.addEventListener("click", () => { changeImage(1) })
+lastButton.addEventListener("click", () => { setImage(totalImages - 1) })
