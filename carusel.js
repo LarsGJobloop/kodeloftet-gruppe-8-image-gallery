@@ -66,9 +66,9 @@ const nextButton = document.getElementById("next-button")
 const lastButton = document.getElementById("last-button")
 
 // Normal function
-function funcName(parm1, param2) { /** Logic */ }
+function funcName(parmeter1, parmeter2) { /** Function logic */ }
 // Arrow function / Lambda, anonyme funksjoner
-(param1, param2) => { /** Logic */ }
+(parmeter1, parmeter2) => { /** Function logic */ }
 
 firstButton.addEventListener("click", () => { setImage(0) })
 previousButton.addEventListener("click", () => { changeImage(-1) })
