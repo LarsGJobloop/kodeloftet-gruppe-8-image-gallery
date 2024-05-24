@@ -3,7 +3,7 @@ function nextImage() {
 }
 
 function previousImage() {
-    changeImage
+    changeImage(-1)
 }
 
 function changeImage(offset) {
